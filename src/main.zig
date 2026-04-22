@@ -120,8 +120,7 @@ fn languages(
         stats.languages.values(),
         progress,
         lang_list,
-        0..,
-    ) |language, count, *progress_s, *lang_s, i| {
+    ) |language, count, *progress_s, *lang_s| {
         const color = stats.language_colors.get(language);
         const percent =
             100 * if (stats.languages_total == 0)
@@ -136,7 +135,7 @@ fn languages(
             \\" class="progress-item"></span>
         , .{ color orelse "#000", percent });
         lang_s.* = try std.fmt.allocPrint(a,
-            \\<li style="animation-delay: {d}ms;">
+            \\<li>
             \\  <svg 
             \\      xmlns="http://www.w3.org/2000/svg" 
             \\      class="octicon"
@@ -153,7 +152,7 @@ fn languages(
             \\  <span class="percent">{d:.2}%</span>
             \\</li>
             \\
-        , .{ (i + 1) * 150, color orelse "#000", language, percent });
+        , .{ color orelse "#000", language, percent });
     }
     return templateFill(
         a,
