@@ -126,16 +126,16 @@ div.ellipsis {
 <span class="progress">
 <span style="
   background-color: #A97BFF; 
-  width: 50.329%;
+  width: 50.325%;
 " class="progress-item"></span><span style="
   background-color: #3572A5; 
-  width: 16.048%;
+  width: 16.047%;
 " class="progress-item"></span><span style="
   background-color: #b07219; 
-  width: 12.733%;
+  width: 12.732%;
 " class="progress-item"></span><span style="
   background-color: #ec915c; 
-  width: 8.423%;
+  width: 8.430%;
 " class="progress-item"></span><span style="
   background-color: #f1e05a; 
   width: 4.652%;
@@ -150,7 +150,7 @@ div.ellipsis {
   width: 1.126%;
 " class="progress-item"></span><span style="
   background-color: #fedf5b; 
-  width: 0.969%;
+  width: 0.968%;
 " class="progress-item"></span><span style="
   background-color: #5686a5; 
   width: 0.733%;
@@ -255,7 +255,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Zig</span>
-  <span class="percent">8.42%</span>
+  <span class="percent">8.43%</span>
 </li>
 <li>
   <svg 
@@ -287,7 +287,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">MATLAB</span>
-  <span class="percent">2.90%</span>
+  <span class="percent">2.89%</span>
 </li>
 <li>
   <svg 
