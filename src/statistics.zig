@@ -61,7 +61,7 @@ const Repository = struct {
         if (response.status == .ok) {
             const authors = (try std.json.parseFromSliceLeaky(
                 []struct {
-                    author: struct { login: []const u8 },
+                    author: ?struct { login: []const u8 },
                     weeks: []struct {
                         a: u32,
                         d: u32,
@@ -73,7 +73,8 @@ const Repository = struct {
             ));
             self.lines_changed = 0;
             for (authors) |o| {
-                if (!std.mem.eql(u8, o.author.login, user)) {
+                const author = o.author orelse continue;
+                if (!std.mem.eql(u8, author.login, user)) {
                     continue;
                 }
                 for (o.weeks) |week| {
@@ -146,6 +147,21 @@ pub fn deinit(self: Statistics, allocator: std.mem.Allocator) void {
     allocator.free(self.emails);
 }
 
+fn checkGraphQLErrors(arena: *std.heap.ArenaAllocator, body: []const u8) !void {
+    const Errors = struct { errors: ?[]struct { message: []const u8 } };
+    const parsed = std.json.parseFromSliceLeaky(
+        Errors,
+        arena.allocator(),
+        body,
+        .{ .ignore_unknown_fields = true },
+    ) catch return;
+    if (parsed.errors) |errors| {
+        for (errors) |e| {
+            std.log.err("GraphQL error: {s}", .{e.message});
+        }
+    }
+}
+
 fn getBasicInfo(client: *HttpClient, arena: *std.heap.ArenaAllocator) !struct {
     years: []u32,
     user: []const u8,
@@ -172,6 +188,7 @@ fn getBasicInfo(client: *HttpClient, arena: *std.heap.ArenaAllocator) !struct {
         );
         return error.RequestFailed;
     }
+    try checkGraphQLErrors(arena, response.body);
     const parsed = (try std.json.parseFromSliceLeaky(
         struct { data: struct { viewer: struct {
             login: []const u8,
@@ -301,6 +318,7 @@ fn getReposByYear(
         );
         return error.RequestFailed;
     }
+    try checkGraphQLErrors(context.arena, response.body);
     const stats = (try std.json.parseFromSliceLeaky(
         struct { data: struct { viewer: struct {
             contributionsCollection: struct {
@@ -320,7 +338,7 @@ fn getReposByYear(
                         languages: ?struct {
                             edges: ?[]struct {
                                 size: u32,
-                                node: struct {
+                                node: ?struct {
                                     name: []const u8,
                                     color: ?[]const u8,
                                 },
@@ -399,34 +417,37 @@ fn getReposByYear(
         errdefer repository.deinit(context.allocator);
         if (raw_repo.languages) |repo_languages| {
             if (repo_languages.edges) |raw_languages| {
+                var language_count: usize = 0;
+                for (raw_languages) |raw| {
+                    if (raw.node != null) language_count += 1;
+                }
                 repository.languages = try context.allocator.alloc(
                     Language,
-                    raw_languages.len,
+                    language_count,
                 );
                 errdefer {
                     context.allocator.free(repository.languages.?);
                     repository.languages = null;
                 }
-                for (
-                    raw_languages,
-                    repository.languages.?,
-                    0..,
-                ) |raw, *language, i| {
+                var i: usize = 0;
+                for (raw_languages) |raw| {
+                    const node = raw.node orelse continue;
                     errdefer {
                         for (0..i, repository.languages.?) |_, l| {
                             context.allocator.free(l.name);
                             if (l.color) |c| context.allocator.free(c);
                         }
                     }
-                    language.* = .{
-                        .name = try context.allocator.dupe(u8, raw.node.name),
+                    repository.languages.?[i] = .{
+                        .name = try context.allocator.dupe(u8, node.name),
                         .size = raw.size,
                     };
-                    errdefer context.allocator.free(language.name);
-                    if (raw.node.color) |color| {
-                        language.color = try context.allocator.dupe(u8, color);
+                    errdefer context.allocator.free(repository.languages.?[i].name);
+                    if (node.color) |color| {
+                        repository.languages.?[i].color = try context.allocator.dupe(u8, color);
                     }
-                    errdefer if (language.color) |c| context.allocator.free(c);
+                    errdefer if (repository.languages.?[i].color) |c| context.allocator.free(c);
+                    i += 1;
                 }
             }
         }
