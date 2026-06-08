@@ -6,16 +6,16 @@ var stdout: *std.Io.Writer = undefined;
 var stderr: *std.Io.Writer = undefined;
 
 pub fn parse(
-    allocator: std.mem.Allocator,
+    init: std.process.Init,
     T: type,
     errorCheck: ?fn (args: T, stderr: *std.Io.Writer) anyerror!bool,
 ) !T {
-    var stdout_writer = std.fs.File.stdout().writer(&.{});
+    var stdout_writer = std.Io.File.stdout().writer(init.io, &.{});
     stdout = &stdout_writer.interface;
-    var stderr_writer = std.fs.File.stderr().writer(&.{});
+    var stderr_writer = std.Io.File.stderr().writer(init.io, &.{});
     stderr = &stderr_writer.interface;
 
-    var arena: std.heap.ArenaAllocator = .init(allocator);
+    var arena: std.heap.ArenaAllocator = .init(init.gpa);
     defer arena.deinit();
     const a = arena.allocator();
 
@@ -25,16 +25,22 @@ pub fn parse(
     errdefer {
         inline for (fields, seen) |field, seen_field| {
             if (seen_field) {
-                freeField(allocator, @field(result, field.name));
+                freeField(init.gpa, @field(result, field.name));
             }
         }
     }
 
-    const args = try std.process.argsAlloc(a);
-    defer std.process.argsFree(a, args);
-    try setFromCli(T, allocator, &arena, args, &seen, &result);
-    try setFromEnv(T, allocator, &arena, &seen, &result);
-    try setFromDefaults(T, allocator, &seen, &result);
+    var arg_iter = try std.process.Args.Iterator.initAllocator(init.minimal.args, a);
+    defer arg_iter.deinit();
+    var args_list = try std.ArrayList([]const u8).initCapacity(a, 16);
+    while (arg_iter.next()) |arg| {
+        try args_list.append(a, arg);
+    }
+    const args = try args_list.toOwnedSlice(a);
+
+    try setFromCli(T, init.gpa, &arena, args, &seen, &result);
+    try setFromEnv(T, init.gpa, &arena, init.environ_map, &seen, &result);
+    try setFromDefaults(T, init.gpa, &seen, &result);
 
     inline for (fields, seen) |field, seen_field| {
         if (!seen_field) {
@@ -137,13 +143,12 @@ fn setFromEnv(
     T: type,
     allocator: std.mem.Allocator,
     arena: *std.heap.ArenaAllocator,
+    env_map: *std.process.Environ.Map,
     seen: []bool,
     result: *T,
 ) !void {
     const a = arena.allocator();
-    var env = try std.process.getEnvMap(a);
-    defer env.deinit();
-    var iterator = env.iterator();
+    var iterator = env_map.iterator();
     while (iterator.next()) |entry| {
         const key = try a.dupe(u8, entry.key_ptr.*);
         defer a.free(key);
