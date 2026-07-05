@@ -126,19 +126,19 @@ div.ellipsis {
 <span class="progress">
 <span style="
   background-color: #A97BFF; 
-  width: 51.788%;
+  width: 51.801%;
 " class="progress-item"></span><span style="
   background-color: #3572A5; 
-  width: 15.454%;
+  width: 15.448%;
 " class="progress-item"></span><span style="
   background-color: #b07219; 
-  width: 12.155%;
+  width: 12.158%;
 " class="progress-item"></span><span style="
   background-color: #ec915c; 
-  width: 8.038%;
+  width: 8.039%;
 " class="progress-item"></span><span style="
   background-color: #f1e05a; 
-  width: 4.446%;
+  width: 4.447%;
 " class="progress-item"></span><span style="
   background-color: #e16737; 
   width: 2.764%;
@@ -147,7 +147,7 @@ div.ellipsis {
   width: 1.612%;
 " class="progress-item"></span><span style="
   background-color: #89e051; 
-  width: 1.082%;
+  width: 1.076%;
 " class="progress-item"></span><span style="
   background-color: #fedf5b; 
   width: 0.925%;
@@ -185,9 +185,6 @@ div.ellipsis {
   background-color: #00ADD8; 
   width: 0.009%;
 " class="progress-item"></span><span style="
-  background-color: #384d54; 
-  width: 0.008%;
-" class="progress-item"></span><span style="
   background-color: #DA3434; 
   width: 0.004%;
 " class="progress-item"></span><span style="
@@ -216,7 +213,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Kotlin</span>
-  <span class="percent">51.79%</span>
+  <span class="percent">51.80%</span>
 </li>
 <li>
   <svg 
@@ -520,22 +517,6 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Go Template</span>
-  <span class="percent">0.01%</span>
-</li>
-<li>
-  <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      class="octicon"
-      style="fill: #384d54;" 
-      viewBox="0 0 16 16" 
-      version="1.1" 
-      width="16" 
-      height="16"
-  ><path 
-      fill-rule="evenodd" 
-      d="M8 4a4 4 0 100 8 4 4 0 000-8z"
-  ></path></svg>
-  <span class="lang">Dockerfile</span>
   <span class="percent">0.01%</span>
 </li>
 <li>
