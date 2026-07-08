@@ -126,37 +126,37 @@ div.ellipsis {
 <span class="progress">
 <span style="
   background-color: #A97BFF; 
-  width: 51.783%;
+  width: 51.715%;
 " class="progress-item"></span><span style="
   background-color: #3572A5; 
-  width: 15.463%;
+  width: 15.571%;
 " class="progress-item"></span><span style="
   background-color: #b07219; 
-  width: 12.154%;
+  width: 12.138%;
 " class="progress-item"></span><span style="
   background-color: #ec915c; 
-  width: 8.037%;
+  width: 8.026%;
 " class="progress-item"></span><span style="
   background-color: #f1e05a; 
-  width: 4.445%;
+  width: 4.440%;
 " class="progress-item"></span><span style="
   background-color: #e16737; 
-  width: 2.763%;
+  width: 2.760%;
 " class="progress-item"></span><span style="
   background-color: #e34c26; 
-  width: 1.612%;
+  width: 1.609%;
 " class="progress-item"></span><span style="
   background-color: #89e051; 
-  width: 1.082%;
+  width: 1.081%;
 " class="progress-item"></span><span style="
   background-color: #fedf5b; 
-  width: 0.924%;
+  width: 0.923%;
 " class="progress-item"></span><span style="
   background-color: #5686a5; 
-  width: 0.700%;
+  width: 0.699%;
 " class="progress-item"></span><span style="
   background-color: #F05138; 
-  width: 0.184%;
+  width: 0.183%;
 " class="progress-item"></span><span style="
   background-color: #3178c6; 
   width: 0.176%;
@@ -182,11 +182,11 @@ div.ellipsis {
   background-color: #427819; 
   width: 0.014%;
 " class="progress-item"></span><span style="
+  background-color: #384d54; 
+  width: 0.010%;
+" class="progress-item"></span><span style="
   background-color: #00ADD8; 
   width: 0.009%;
-" class="progress-item"></span><span style="
-  background-color: #384d54; 
-  width: 0.008%;
 " class="progress-item"></span><span style="
   background-color: #DA3434; 
   width: 0.004%;
@@ -216,7 +216,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Kotlin</span>
-  <span class="percent">51.78%</span>
+  <span class="percent">51.72%</span>
 </li>
 <li>
   <svg 
@@ -232,7 +232,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Python</span>
-  <span class="percent">15.46%</span>
+  <span class="percent">15.57%</span>
 </li>
 <li>
   <svg 
@@ -248,7 +248,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Java</span>
-  <span class="percent">12.15%</span>
+  <span class="percent">12.14%</span>
 </li>
 <li>
   <svg 
@@ -264,7 +264,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Zig</span>
-  <span class="percent">8.04%</span>
+  <span class="percent">8.03%</span>
 </li>
 <li>
   <svg 
@@ -280,7 +280,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">JavaScript</span>
-  <span class="percent">4.45%</span>
+  <span class="percent">4.44%</span>
 </li>
 <li>
   <svg 
@@ -424,7 +424,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">C</span>
-  <span class="percent">0.17%</span>
+  <span class="percent">0.16%</span>
 </li>
 <li>
   <svg 
@@ -510,22 +510,6 @@ div.ellipsis {
   <svg 
       xmlns="http://www.w3.org/2000/svg" 
       class="octicon"
-      style="fill: #00ADD8;" 
-      viewBox="0 0 16 16" 
-      version="1.1" 
-      width="16" 
-      height="16"
-  ><path 
-      fill-rule="evenodd" 
-      d="M8 4a4 4 0 100 8 4 4 0 000-8z"
-  ></path></svg>
-  <span class="lang">Go Template</span>
-  <span class="percent">0.01%</span>
-</li>
-<li>
-  <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      class="octicon"
       style="fill: #384d54;" 
       viewBox="0 0 16 16" 
       version="1.1" 
@@ -536,6 +520,22 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Dockerfile</span>
+  <span class="percent">0.01%</span>
+</li>
+<li>
+  <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      class="octicon"
+      style="fill: #00ADD8;" 
+      viewBox="0 0 16 16" 
+      version="1.1" 
+      width="16" 
+      height="16"
+  ><path 
+      fill-rule="evenodd" 
+      d="M8 4a4 4 0 100 8 4 4 0 000-8z"
+  ></path></svg>
+  <span class="lang">Go Template</span>
   <span class="percent">0.01%</span>
 </li>
 <li>
