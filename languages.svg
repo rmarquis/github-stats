@@ -126,31 +126,31 @@ div.ellipsis {
 <span class="progress">
 <span style="
   background-color: #A97BFF; 
-  width: 52.159%;
+  width: 52.115%;
 " class="progress-item"></span><span style="
   background-color: #3572A5; 
-  width: 15.683%;
+  width: 15.755%;
 " class="progress-item"></span><span style="
   background-color: #b07219; 
-  width: 11.926%;
+  width: 11.916%;
 " class="progress-item"></span><span style="
   background-color: #ec915c; 
-  width: 7.886%;
+  width: 7.879%;
 " class="progress-item"></span><span style="
   background-color: #f1e05a; 
-  width: 4.362%;
+  width: 4.358%;
 " class="progress-item"></span><span style="
   background-color: #e16737; 
-  width: 2.712%;
+  width: 2.709%;
 " class="progress-item"></span><span style="
   background-color: #e34c26; 
-  width: 1.581%;
+  width: 1.580%;
 " class="progress-item"></span><span style="
   background-color: #89e051; 
-  width: 1.069%;
+  width: 1.068%;
 " class="progress-item"></span><span style="
   background-color: #fedf5b; 
-  width: 0.907%;
+  width: 0.906%;
 " class="progress-item"></span><span style="
   background-color: #5686a5; 
   width: 0.686%;
@@ -216,7 +216,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Kotlin</span>
-  <span class="percent">52.16%</span>
+  <span class="percent">52.11%</span>
 </li>
 <li>
   <svg 
@@ -232,7 +232,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Python</span>
-  <span class="percent">15.68%</span>
+  <span class="percent">15.75%</span>
 </li>
 <li>
   <svg 
@@ -248,7 +248,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Java</span>
-  <span class="percent">11.93%</span>
+  <span class="percent">11.92%</span>
 </li>
 <li>
   <svg 
@@ -264,7 +264,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Zig</span>
-  <span class="percent">7.89%</span>
+  <span class="percent">7.88%</span>
 </li>
 <li>
   <svg 
