@@ -126,19 +126,19 @@ div.ellipsis {
 <span class="progress">
 <span style="
   background-color: #A97BFF; 
-  width: 51.595%;
+  width: 51.583%;
 " class="progress-item"></span><span style="
   background-color: #3572A5; 
-  width: 15.168%;
+  width: 15.164%;
 " class="progress-item"></span><span style="
   background-color: #b07219; 
-  width: 11.797%;
+  width: 11.794%;
 " class="progress-item"></span><span style="
   background-color: #ec915c; 
-  width: 7.801%;
+  width: 7.799%;
 " class="progress-item"></span><span style="
   background-color: #f1e05a; 
-  width: 4.315%;
+  width: 4.314%;
 " class="progress-item"></span><span style="
   background-color: #e16737; 
   width: 2.682%;
@@ -150,7 +150,7 @@ div.ellipsis {
   width: 1.050%;
 " class="progress-item"></span><span style="
   background-color: #239dad; 
-  width: 1.018%;
+  width: 1.042%;
 " class="progress-item"></span><span style="
   background-color: #fedf5b; 
   width: 0.897%;
@@ -171,7 +171,7 @@ div.ellipsis {
   width: 0.171%;
 " class="progress-item"></span><span style="
   background-color: #663399; 
-  width: 0.163%;
+  width: 0.162%;
 " class="progress-item"></span><span style="
   background-color: #c6538c; 
   width: 0.083%;
@@ -222,7 +222,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Kotlin</span>
-  <span class="percent">51.59%</span>
+  <span class="percent">51.58%</span>
 </li>
 <li>
   <svg 
@@ -238,7 +238,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Python</span>
-  <span class="percent">15.17%</span>
+  <span class="percent">15.16%</span>
 </li>
 <li>
   <svg 
@@ -254,7 +254,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Java</span>
-  <span class="percent">11.80%</span>
+  <span class="percent">11.79%</span>
 </li>
 <li>
   <svg 
@@ -350,7 +350,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Typst</span>
-  <span class="percent">1.02%</span>
+  <span class="percent">1.04%</span>
 </li>
 <li>
   <svg 
