@@ -126,28 +126,28 @@ div.ellipsis {
 <span class="progress">
 <span style="
   background-color: #A97BFF; 
-  width: 51.341%;
+  width: 51.325%;
 " class="progress-item"></span><span style="
   background-color: #3572A5; 
-  width: 15.093%;
+  width: 15.088%;
 " class="progress-item"></span><span style="
   background-color: #b07219; 
-  width: 11.739%;
+  width: 11.735%;
 " class="progress-item"></span><span style="
   background-color: #ec915c; 
-  width: 7.820%;
+  width: 7.818%;
 " class="progress-item"></span><span style="
   background-color: #f1e05a; 
-  width: 4.294%;
+  width: 4.292%;
 " class="progress-item"></span><span style="
   background-color: #e16737; 
-  width: 2.669%;
+  width: 2.668%;
 " class="progress-item"></span><span style="
   background-color: #e34c26; 
-  width: 1.557%;
+  width: 1.568%;
 " class="progress-item"></span><span style="
   background-color: #239dad; 
-  width: 1.440%;
+  width: 1.458%;
 " class="progress-item"></span><span style="
   background-color: #89e051; 
   width: 1.045%;
@@ -156,7 +156,7 @@ div.ellipsis {
   width: 0.893%;
 " class="progress-item"></span><span style="
   background-color: #5686a5; 
-  width: 0.676%;
+  width: 0.675%;
 " class="progress-item"></span><span style="
   background-color: #dea584; 
   width: 0.378%;
@@ -222,7 +222,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Kotlin</span>
-  <span class="percent">51.34%</span>
+  <span class="percent">51.32%</span>
 </li>
 <li>
   <svg 
@@ -318,7 +318,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">HTML</span>
-  <span class="percent">1.56%</span>
+  <span class="percent">1.57%</span>
 </li>
 <li>
   <svg 
@@ -334,7 +334,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Typst</span>
-  <span class="percent">1.44%</span>
+  <span class="percent">1.46%</span>
 </li>
 <li>
   <svg 
@@ -350,7 +350,7 @@ div.ellipsis {
       d="M8 4a4 4 0 100 8 4 4 0 000-8z"
   ></path></svg>
   <span class="lang">Shell</span>
-  <span class="percent">1.05%</span>
+  <span class="percent">1.04%</span>
 </li>
 <li>
   <svg 
